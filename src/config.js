@@ -11,8 +11,8 @@ const launchOptionForLambda = [
 ];
 
 const headlessExecutable = "headless-chromium";
-const headlessFile = "chrome-headless-lambda-linux-59.0.3039.0.tar.gz";
-const headlessFilePath = "https://github.com/adieuadieu/serverless-chrome/raw/master/packages/lambda/chrome/chrome-headless-lambda-linux-59.0.3039.0.tar.gz";
+const headlessFile = "headless-chromium-64.0.3242.2-amazonlinux-2017-03.zip";
+const headlessFilePath = "https://github.com/adieuadieu/serverless-chrome/raw/master/packages/lambda/chrome/headless-chromium-64.0.3242.2-amazonlinux-2017-03.zip";
 const localChromePath = path.join(__dirname, '../chrome/' + headlessFile);
 const remoteChromeS3Bucket = process.env.CHROME_BUCKET;
 const remoteChromeS3Key = process.env.CHROME_KEY || headlessFile;
