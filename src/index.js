@@ -17,6 +17,7 @@ exports.getBrowser = async (options) => {
         if ((process.env.CUSTOM_CHROME && process.env.CUSTOM_CHROME == "true" )|| (process.env.CHROME_BUCKET && process.env.CHROME_KEY)) {
             await setupChrome();
             globalBrowser = await puppeteer.launch(Object.assign({
+                pipe: true,
                 headless: true,
                 executablePath: config.executablePath,
                 args: config.launchOptionForLambda,
